@@ -35,7 +35,7 @@ function Login() {
 	React.useEffect(() => {
 		localStorage.removeItem('token');
 		fetchStock();
-	}, []);
+	}, [fetchStock]);
 
 	const handleSubmit = async () => {
 		if (stage === Stage.INITIAL_STAGE) {
