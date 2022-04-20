@@ -1,3 +1,4 @@
+import React from 'react';
 type Props = {
 	className?: string;
 	type?: string;
@@ -11,7 +12,7 @@ const DEFAULT_PROPS = {
 	placeholder: '',
 	maxLength: 5000,
 	value: '',
-	handleChange: (text: string) => {},
+	handleChange: () => {},
 };
 
 const Input = (props: Props = DEFAULT_PROPS) => {

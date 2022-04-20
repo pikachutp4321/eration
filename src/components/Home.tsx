@@ -1,8 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
 import BACKGROUND from '../assets/QT-ration-cards.jpg';
-import Input from './Input';
-import Button from './Button';
 import Axios from '../controller/axios';
 import { useNavigate } from 'react-router-dom';
 

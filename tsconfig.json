@@ -13,8 +13,9 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"noEmit": true,
-		"jsx": "react-jsx"
+		"jsx": "react-jsx",
+		"outDir": "dist/js"
 	},
-	"include": ["src", "src/assets"]
+	"include": ["src", "src/assets"],
+	"exclude": ["node_modules", ".vscode"]
 }
