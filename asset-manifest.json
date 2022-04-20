@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/eration/static/css/main.dc138779.css",
-    "main.js": "/eration/static/js/main.26bbd92c.js",
+    "main.js": "/eration/static/js/main.de2de5ff.js",
     "static/media/QT-ration-cards.jpg": "/eration/static/media/QT-ration-cards.ac3648ac1e71d90377bd.jpg",
     "index.html": "/eration/index.html",
     "main.dc138779.css.map": "/eration/static/css/main.dc138779.css.map",
-    "main.26bbd92c.js.map": "/eration/static/js/main.26bbd92c.js.map"
+    "main.de2de5ff.js.map": "/eration/static/js/main.de2de5ff.js.map"
   },
   "entrypoints": [
     "static/css/main.dc138779.css",
-    "static/js/main.26bbd92c.js"
+    "static/js/main.de2de5ff.js"
   ]
 }
