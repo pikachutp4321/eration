@@ -3,45 +3,42 @@ import Navbar from './Navbar';
 import BACKGROUND from '../assets/QT-ration-cards.jpg';
 import Axios from '../controller/axios';
 import { useNavigate } from 'react-router-dom';
-
 const Home = () => {
-	const navigate = useNavigate();
-	const fetchDetails = React.useCallback(async () => {
-		try {
-			const { data } = await Axios.get('/details');
-			setDetails(data);
-		} catch (err: any) {
-			alert(err.response ? err.response.data : 'Unable to fetch details');
-		}
-	}, []);
-
-	React.useEffect(() => {
-		const token = localStorage.getItem('token');
-		if (!token) {
-			navigate('/login');
-		} else {
-			fetchDetails();
-		}
-	}, [fetchDetails, navigate]);
-
-	const [details, setDetails] = React.useState({
-		name: '',
-		phone: '',
-		email: '',
-		aadhaar: '',
-		address: '',
-		state: '',
-		district: '',
-		membersCount: '',
-		lastMessage: '',
-		allotedQuantity: '',
-	});
-
-	return (
-		<>
+    const navigate = useNavigate();
+    const fetchDetails = React.useCallback(async () => {
+        try {
+            const { data } = await Axios.get('/details');
+            setDetails(data);
+        }
+        catch (err) {
+            alert(err.response ? err.response.data : 'Unable to fetch details');
+        }
+    }, []);
+    React.useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            navigate('/login');
+        }
+        else {
+            fetchDetails();
+        }
+    }, [fetchDetails, navigate]);
+    const [details, setDetails] = React.useState({
+        name: '',
+        phone: '',
+        email: '',
+        aadhaar: '',
+        address: '',
+        state: '',
+        district: '',
+        membersCount: '',
+        lastMessage: '',
+        allotedQuantity: '',
+    });
+    return (<>
 			<Navbar />
 			<div className='absolute -z-10'>
-				<img src={BACKGROUND} alt='' className='full' />
+				<img src={BACKGROUND} alt='' className='full'/>
 			</div>
 			<div className='full flex justify-center items-center'>
 				<div>
@@ -73,8 +70,6 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-		</>
-	);
+		</>);
 };
-
 export default Home;
